@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(145deg, #070065, #070065, #070065);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia para mejorar la visibilidad del logo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Añade sombra para un efecto elevado */
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;  /* Ajuste para el texto si necesario */
+    color: #000;  /* Cambio de color del texto para mejor contraste */
+}
+
+.logo img {
+    width: 30px;  /* Tamaño del logo, ajustable según necesidades */
+    height: auto;
+    margin-right: 10px;  /* Espacio entre el logo y el texto */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    padding: 0 20px;
+}
+
+.nav-list li a {
+    text-decoration: none; /* Esta propiedad quita el subrayado de los enlaces */
+    color: #000; /* Asegura que el color del texto es negro */
+    transition: color 0.5s, text-shadow 0.5s; /* Mantiene las transiciones suaves */
+}
+
+.nav-list li a:hover {
+    color: #505050;  /* Oscurecimiento al hacer hover para visibilidad */
+    text-shadow: 0 0 8px #505050; /* Agrega sombra al hacer hover */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #000;
+    margin-bottom: 4px;
+    border-radius: 3px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+#hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;  /* Ajusta para que la imagen esté al inicio del contenedor */
+    left: 0;  /* Ajusta para que la imagen esté al inicio del contenedor */
+    width: 100%;   /* Ajusta el ancho para cubrir toda la sección */
+    height: 100%;  /* Ajusta la altura para cubrir toda la sección */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    overflow: hidden; /* Esconde cualquier parte de la imagen que exceda el contenedor */
+}
+
+.hero-image img {
+    min-width: 100%; /* Asegura que la imagen cubra todo el ancho */
+    min-height: 100%; /* Asegura que la imagen cubra toda la altura */
+    width: auto; /* Mantiene la proporción de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: auto;
+}
+
+#hero h1 {
+    font-size: 3em;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Sombras más profundas para el encabezado */
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombras sutiles para el texto */
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    background-image: linear-gradient(to right, #004aad, #007bff); /* Gradiente azul coherente con la paleta */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s, box-shadow 0.5s; /* Suaviza la transición de fondo y sombra */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-image: linear-gradient(to right, #007bff, #00a2ff); /* Gradiente más claro para el efecto hover */
+    box-shadow: 0 0 12px rgba(0, 176, 255, 0.8); /* Resalta el botón con un brillo azul al pasar el ratón */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9); /* Ajuste para mantener la coherencia con el header */
+    color: #000;  /* Cambio a color oscuro para mejor contraste */
+    font-size: 0.8em;
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-list li {
+        padding: 5px 0;
+    }
+
+    #hero h1 {
+        font-size: 1.5em;
+    }
+
+    #hero p {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
