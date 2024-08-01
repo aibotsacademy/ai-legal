@@ -16,27 +16,28 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia para mejorar la visibilidad del logo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Añade sombra para un efecto elevado */
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     flex-wrap: wrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-size: 24px;  /* Ajuste para el texto si necesario */
-    color: #000;  /* Cambio de color del texto para mejor contraste */
+    font-size: 24px;  
+    color: #000;  
 }
 
 .logo img {
-    width: 30px;  /* Tamaño del logo, ajustable según necesidades */
+    width: 30px;  
     height: auto;
-    margin-right: 10px;  /* Espacio entre el logo y el texto */
+    margin-right: 10px;  
 }
 
 nav {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .nav-list {
@@ -44,6 +45,8 @@ nav {
     display: flex;
     padding: 0;
     margin: 0;
+    margin-right: auto; 
+    justify-content: flex-end;
 }
 
 .nav-list li {
@@ -51,14 +54,14 @@ nav {
 }
 
 .nav-list li a {
-    text-decoration: none; /* Esta propiedad quita el subrayado de los enlaces */
-    color: #000; /* Asegura que el color del texto es negro */
-    transition: color 0.5s, text-shadow 0.5s; /* Mantiene las transiciones suaves */
+    text-decoration: none;
+    color: #000;
+    transition: color 0.5s, text-shadow 0.5s;
 }
 
 .nav-list li a:hover {
-    color: #505050;  /* Oscurecimiento al hacer hover para visibilidad */
-    text-shadow: 0 0 8px #505050; /* Agrega sombra al hacer hover */
+    color: #505050;
+    text-shadow: 0 0 8px #505050;
 }
 
 .menu-toggle {
@@ -78,28 +81,44 @@ nav {
 /* Responsiveness */
 @media (max-width: 768px) {
     .nav-list {
-        display: none;
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
         background: rgba(255, 255, 255, 0.9);
         position: absolute;
         top: 70px;
         right: 0;
+        position: absolute;
+        top: 0;/* Fix the menu in place */
+        right: 0;
+        z-index: 999; /* Ensure it's on top */
+        height: 100vh; /* Full screen height */
+        width: 300px; /* Adjust width as needed */
+        background-color: #fff; /* Or your desired background color */
+        padding: 20px;
+        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for better appearance */
+        transform: translateX(100%); /* Initially hide the menu */
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+        
     }
 
-    .nav-list.active {
+    .nav-list.active { /* Shows the menu when active */
         display: flex;
+        transform: translateX(0);
     }
 
     .nav-list li {
         text-align: center;
         padding: 15px 0;
+        margin-bottom: 10px; 
     }
 
     .menu-toggle {
-        display: flex;
+        display: flex; /* Shows the hamburger menu on small screens */
     }
 }
+
 
 #hero {
     position: relative;
@@ -112,22 +131,22 @@ nav {
 
 .hero-image {
     position: absolute;
-    top: 0;  /* Ajusta para que la imagen esté al inicio del contenedor */
-    left: 0;  /* Ajusta para que la imagen esté al inicio del contenedor */
-    width: 100%;   /* Ajusta el ancho para cubrir toda la sección */
-    height: 100%;  /* Ajusta la altura para cubrir toda la sección */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center; /* Centra la imagen horizontalmente */
-    align-items: center; /* Centra la imagen verticalmente */
-    overflow: hidden; /* Esconde cualquier parte de la imagen que exceda el contenedor */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .hero-image img {
-    min-width: 100%; /* Asegura que la imagen cubra todo el ancho */
-    min-height: 100%; /* Asegura que la imagen cubra toda la altura */
-    width: auto; /* Mantiene la proporción de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
 }
 
 .hero-text {
@@ -142,37 +161,37 @@ nav {
 
 #hero h1 {
     font-size: 3em;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Sombras más profundas para el encabezado */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
 #hero p {
     font-size: 1.5em;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombras sutiles para el texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 button {
     padding: 12px 25px;
     font-size: 1.2em;
     border: none;
-    background-image: linear-gradient(to right, #004aad, #007bff); /* Gradiente azul coherente con la paleta */
+    background-image: linear-gradient(to right, #004aad, #007bff);
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.5s, box-shadow 0.5s; /* Suaviza la transición de fondo y sombra */
+    transition: background 0.5s, box-shadow 0.5s;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
-    background-image: linear-gradient(to right, #007bff, #00a2ff); /* Gradiente más claro para el efecto hover */
-    box-shadow: 0 0 12px rgba(0, 176, 255, 0.8); /* Resalta el botón con un brillo azul al pasar el ratón */
+    background-image: linear-gradient(to right, #007bff, #00a2ff);
+    box-shadow: 0 0 12px rgba(0, 176, 255, 0.8);
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.9); /* Ajuste para mantener la coherencia con el header */
-    color: #000;  /* Cambio a color oscuro para mejor contraste */
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
     font-size: 0.8em;
 }
 

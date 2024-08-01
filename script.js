@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const text = "Bienvenido a aiTuring";
+    const text = "Bienvenido aiTuring";
     const typewriterElement = document.getElementById('typewriter');
     let i = 0;
     function typeWriter() {
