@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metahumana Yazmín Esquivel Mossa </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox-theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/modernizr.custom.js"></script>
 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/business.png" alt="Hero Image">
+            aiTuring
+        </div>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list">
+                <!-- <li><a href="https://api.whatsapp.com/send/?phone=5219514199661&text=Hola%2C+necesito+m%C3%A1s+informaci%C3%B3n+Businessverso+https%3A%2F%2Fbusinessverso.com.mx&type=phone_number&app_absent=0">Contacto</a></li> -->
+                <li><a href="https://businessadvocacy.com.mx">Businessadvocacy</a></li>
+                <!-- <li><a href="https://businessverso.com.mx">Businessverso</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    
+
+<script
+    type="module"
+    src="https://agent.d-id.com/v1/index.js"
+    data-name="did-agent"
+    data-mode="fabio"
+    data-client-key="Z29vZ2xlLW9hdXRoMnwxMDIzODQzNjQ5NDMxNjAyNTk4NDI6UUc0NGptQkVVeTFnMWotVHUtZDFC"
+    data-agent-id="agt_ODN1mrfY"
+    data-monitor="true">
+</script>
+    
+    
+    <section id="hero">
+        <div class="hero-image">
+            <img src="http://businessadvocacy.com.mx/wp-content/uploads/2020/10/online-programming-course-hero-section-bg.svg" alt="Hero Image">
+        </div>
+        <div class="hero-text">
+            <h1 id="typewriter"></h1>
+            <p>La primera metahumana de la Ministra <b>Yazmín Esquivel Mossa</b></p>
+            <button>Explorar más</button>
+        </div>
+    </section>
+    <footer>
+        Derechos reservados © 2024 aiTuring
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".hideit").click(function(){
+                $(".overlay").hide();
+            });
+            $("#trigger-overlay").click(function(){
+                $(".overlay").show();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            var kawa = $('.top-bar');
+            var back = $('#back-to-top');
+            function scroll() {
+                if ($(window).scrollTop() > 700) {
+                    kawa.addClass('fixed');
+                    back.addClass('show-top');
+                } else {
+                    kawa.removeClass('fixed');
+                    back.removeClass('show-top');
+                }
+            }
+            document.onscroll = scroll;
+        });
+    </script>
+    <script>
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        // Toggle menu script
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
